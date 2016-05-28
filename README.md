@@ -18,16 +18,16 @@ Summary: **DON'T USE IN PRODUCTION**
 - 16-Bit fixed width.
 - two cases
   - monadic form:
-```
+  ```
     [00000 000 00000000]
      (1)   (2) (3)
      ---------------------
      (1) = instruction (5 bits)
      (2) = register address (3 bit: s0 - s7)
      (3) = immediate constant (8 bits)
-```
+  ```
   - dyadic form:
-```
+  ```
     [00000 000 000 00000]
      (1)   (2) (3) (4)
      -----------------
@@ -35,7 +35,7 @@ Summary: **DON'T USE IN PRODUCTION**
      (2) = first register address (sX)
      (3) = second register address (sY)
      (4) = unused (5 bits)
-```
+  ```
 
 - This closely resembles the
   behaviour of the original picoblaze
