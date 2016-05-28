@@ -26,7 +26,6 @@ Summary: **DON'T USE IN PRODUCTION**
      (2) = register address (3 bit: s0 - s7)
      (3) = immediate constant (8 bits)
 ```
-
   - dyadic form:
 ```
     [00000 000 000 00000]
