@@ -11,7 +11,7 @@ Picoc is three things
   into an semantically equivalent Verilog design, which in turn
   is fully synthesizable.
 
-Summary: DON'T USE IN PRODUCTION
+Summary: **DON'T USE IN PRODUCTION**
 
 ## Instruction format of picoc
 
