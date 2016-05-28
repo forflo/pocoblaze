@@ -1,34 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-/* Instruction format of picoc:
- *
- * - 16-Bit fixed width
- * - two cases
- *   - monadic form:
- *     [00000 000 00000000]
- *      (1)   (2) (3)
- *      ---------------------
- *      (1) = instruction (5 bits)
- *      (2) = register address (3 bit: s0 - s7)
- *      (3) = immediate constant (8 bits)
- *
- *   - dyadic form:
- *     [00000 000 000 00000]
- *      (1)   (2) (3) (4)
- *      -----------------
- *      (1) = instruction (5 bits)
- *      (2) = first register address (sX)
- *      (3) = second register address (sY)
- *      (4) = unused (5 bits)
- *
- * - This closely resembles the
- *   behaviour of the original picoblaze
- *   implementation in VHDL
- * - Note that some monadic instructions will use
- *   the dyadic form storing the register address
- *   in (3) and using (2) as switch (an example would be
- *   the shift and rotate instruction) */
 
 /* Compile with -DSIMULATOR to enable stats */
 // Configuration variables for the softcore
