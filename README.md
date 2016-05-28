@@ -79,6 +79,43 @@ Summary: **DON'T USE IN PRODUCTION**
   You can find this listing on p. 31 in picoc/references/reference_manual.pdf.
   This version, however, contains a bug! It seems that someone wrote that
   code before they added additional odd parity semantics to the TEST instruction.
+  
+  Needless to say, I implemented the proper additional TEST feature. 
+  My attempt of writing this in C resultet in utter cargo cult programming
+  that I'm pretty proud of. What a reason to show off using ugly C Code:
+  
+  ```C
+  /* WARNING! CARGO CULT PROGRAMMING:
+   * http://stackoverflow.com/questions/109023/
+   * how-to-count-the-number-of-set-bits-in-a-32-bit-integer */
+  uint8_t NumberOfSetBits(uint32_t i){
+    // Java: use >>> instead of >>
+    // C or C++: use uint32_t
+    i = i - ((i >> 1) & 0x55555555);
+    i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+    return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
+  }
+
+  /* test s7, ff  ; if (s7 AND ff) = 0 then ZERO <- 1,
+   *              ;   CARRY <- odd parity of (s7 AND ff) */
+  void test_k_to_sx(){
+    printf("In function: test_k_to_sx\n");
+
+    if ((register_file[x_register_pointer]
+         & constant_argument) == 0) {
+        zero_flag = true;
+    }
+
+    // parity generator disabled because it seems
+    // to misbehave in conjunction with the
+    carry_flag = (NumberOfSetBits(
+                      (register_file[x_register_pointer]
+                       & constant_argument)) % 2 == 0)
+        ? 1
+        : 0;
+  }
+
+  ```
 
 ## Instruction format of picoc
 
