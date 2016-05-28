@@ -31,7 +31,7 @@ Summary: **DON'T USE IN PRODUCTION**
   - fetch
   - store (because the assembler doesn't support the latter two)
 - As examble what you **can** do, look at that:
-  ```assembler
+  ```assembly
   ; Multiplier Routine (8-bit x 8-bit = 16-bit product)
   ; ==================================================
   ; Shift and add algorithm
