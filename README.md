@@ -1,7 +1,7 @@
-# Picoc
-## What is picoc
+# Pocoblaze
+## What is Pocoblaze
 
-Picoc is three things
+Pocoblaze is three things
 
 - A (surprisingly well functioning) educational play project
 - A binary compatible emulator for the picoblaze (Xilinx)
@@ -24,7 +24,7 @@ Summary: **DON'T USE IN PRODUCTION**
 ## Current status of development
 
 - I implemented (and tested) the most instructions from the
-  picoblaze instruction set (visit picoc/references/reference_manual.pdf).
+  picoblaze instruction set (visit pocoblaze/references/reference_manual.pdf).
 - Instructions that aren't supportet yet are
   - returni
   - interrupt management instructions
@@ -76,7 +76,7 @@ Summary: **DON'T USE IN PRODUCTION**
       add result_msb, 01
       sub result_lsb, 0A
   ```
-  You can find this listing on p. 31 in picoc/references/reference_manual.pdf.
+  You can find this listing on p. 31 in pocoblaze/references/reference_manual.pdf.
   This version, however, contains a bug! It seems that someone wrote that
   code before they added additional odd parity semantics to the TEST instruction.
 
@@ -116,7 +116,7 @@ Summary: **DON'T USE IN PRODUCTION**
   }
   ```
 
-## Instruction format of picoc
+## Instruction format of Pocoblaze
 
 - 16-Bit fixed width.
 - two cases
@@ -149,11 +149,11 @@ Summary: **DON'T USE IN PRODUCTION**
   the shift and rotate instruction)
 
 ## Assembler
-In directory picoc/assembler you can find a modified version
+In directory pocoblaze/assembler you can find a modified version
 of the original Picoblaze assembler. The code is beyond ugly
 but it works quite well. I added support for the TEST instruction
 as described by the 2004 revision of the picoblaze manual. A
-copy of this manual resides in picoc/references.
+copy of this manual resides in pocoblaze/references.
 
 WARNING: ASM.CPP IS NOT MY SOFTWARE
 it's copyrighted by Xilinx!
