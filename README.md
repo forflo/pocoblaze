@@ -175,7 +175,7 @@ In order to generate Verilog using LegUp you have to
 download the LegUp Appliance. You can do that
 [here](http://legup.eecg.utoronto.ca/getstarted.php).
 
-Simply place repo/pocoplaze inside ../<leguppath>/examples/,
+Simply place repo/pocoplaze inside ../[leguppath]/examples/,
 change into the directory and enter
 
     $ make -f LegupMakefile
