@@ -157,3 +157,11 @@ copy of this manual resides in pocoblaze/references.
 
 WARNING: ASM.CPP IS NOT MY SOFTWARE
 it's copyrighted by Xilinx!
+
+## How to build
+
+1. Check out this repo
+2. Cd into repo/pocoblaze
+3. Build using
+
+        $ CFLAGS="-DSIMULATOR -DFANCY_RAM_REPORT" make
