@@ -4,9 +4,9 @@
 Pocoblaze is three things
 
 - A (surprisingly well functioning) educational play project
-- A binary compatible emulator for the picoblaze (Xilinx)
+- A binary compatible emulator for the (Xilinx) Picoblaze
   instruction set.
-- A legup synthesizable hardware design. That is, a C-Program
+- A legup synthesizable hardware design. That is, a C program
   that only uses language primitives that can be transformed
   into an semantically equivalent Verilog design, which in turn
   is fully synthesizable.
@@ -28,8 +28,6 @@ Summary: **DON'T USE IN PRODUCTION**
 - Instructions that aren't supportet yet are
   - returni
   - interrupt management instructions
-  - fetch
-  - store (because the assembler doesn't support the latter two)
 - As examble what you **can** do, look at that:
   ```assembly
   ; Multiplier Routine (8-bit x 8-bit = 16-bit product)
@@ -82,7 +80,7 @@ Summary: **DON'T USE IN PRODUCTION**
 
   Needless to say, I implemented the proper additional TEST feature.
   My attempt of writing this in C resultet in utter cargo cult programming
-  that I'm pretty proud of. What a reason to show off using ugly C Code:
+  that I'm pretty proud of. What a reason to show off ugly C Code! :)
 
   ```C
   /* WARNING! CARGO CULT PROGRAMMING:
@@ -118,7 +116,7 @@ Summary: **DON'T USE IN PRODUCTION**
 
 ## Instruction format of Pocoblaze
 
-- 16-Bit fixed width.
+- 16-Bit fixed width
 - two cases
   - monadic form:
   ```
