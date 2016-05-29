@@ -34,7 +34,7 @@ no_add: AND s0, s0           ; clear CARRY
         RETURN ; multiplier result now available in
                                 ; result_msb and result_lsb
 
-main:   load s0, 33
+main:   load s0, 39
         load s1, ff
         call mult_8x8
         add result_msb, 01

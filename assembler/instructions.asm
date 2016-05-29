@@ -1,6 +1,8 @@
         ;;
         ;; @author: FM.
         ;; all instructions of picoblaze of the 16 bit version
+        ;; This file contains the semantics of the instructions
+        ;; resinding in appropriate comments
         ;;,,,,,,,,,
 
         ;; arithmetic
@@ -52,10 +54,8 @@
         SR0 s7                  ; s7 <- {0,s7[7:1]}, CARRY <- s7[0]
         SR1 s7                  ; s7 <- {1,s7[7:1]}, CARRY <- s7[0], ZERO <- 0
 
-        
         SRA s7                  ; s7 <- {CARRY, s7[7:1]}, CARRY <- s7[0]
         SRX s7                  ; s7 <- {s7[7], s7[7:1]}, CARRY <- s7[0]
-        
 
         ;; branch commands
         call fnord              ; unconditionally call fnord
@@ -82,11 +82,13 @@
         load s7, s7             ; s7 <- s7
 
         ;; fetch and store not implemented by assembler
-        ;; fetch s6, s7            ; s6 <- RAM[(s7)]
-        ;; fetch s6, ff            ; s6 <- RAM[ff]
+        fetch s6, s7            ; s6 <- RAM[(s7)]
+        fetch s6, ff            ; s6 <- RAM[ff]
 
-        ;; store s7, s7            ; RAM[(s7)] <- s7
-        ;; store s7, ff            ; RAM[ff] <- s7
+        ;; store sX, k -> RAM[k] <- sX
+        ;; store sX, sY -> RAM[(sY)] <- sX
+        store s7, s7            ; RAM[(s7)] <- s7
+        store s7, ff            ; RAM[ff] <- s7
 
         ;; returni ENABLE and DISABLE omitted
         ;; input omitted
