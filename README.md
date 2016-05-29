@@ -165,3 +165,23 @@ it's copyrighted by Xilinx!
 3. Build using
 
         $ CFLAGS="-DSIMULATOR -DFANCY_RAM_REPORT" make
+
+4. Cd into repo/assembler
+5. Build assembler using
+
+        $ make
+
+In order to generate Verilog using LegUp you have to
+download the LegUp Appliance. You can do that
+[here](http://legup.eecg.utoronto.ca/getstarted.php).
+
+Simply place repo/pocoplaze inside ../<leguppath>/examples/,
+change into the directory and enter
+
+    $ make -f LegupMakefile
+
+for Verilog synthesis and.
+
+    $ make -f LegupMakefile v
+
+for Verilog simulation.
