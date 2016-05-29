@@ -164,4 +164,4 @@ it's copyrighted by Xilinx!
 2. Cd into repo/pocoblaze
 3. Build using
 
-        $ CFLAGS="-DSIMULATOR -DFANCY_RAM_REPORT" make
+    $ CFLAGS="-DSIMULATOR -DFANCY_RAM_REPORT" make
