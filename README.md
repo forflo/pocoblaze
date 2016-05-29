@@ -158,8 +158,8 @@ copy of this manual resides in pocoblaze/references.
 WARNING: ASM.CPP IS NOT MY SOFTWARE
 it's copyrighted by Xilinx!
 
-## How to build
-
+## Usage
+### Build a hosted binary
 1. Check out this repo
 2. Cd into repo/pocoblaze
 3. Build using
@@ -171,6 +171,7 @@ it's copyrighted by Xilinx!
 
         $ make
 
+### Synthesize to hardware
 In order to generate Verilog using LegUp you have to
 download the LegUp Appliance. You can do that
 [here](http://legup.eecg.utoronto.ca/getstarted.php).
