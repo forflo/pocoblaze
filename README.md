@@ -3,7 +3,7 @@
 
 Pocoblaze is three things
 
-- A (surprisingly well functioning) educational play project
+- A educational play project (working surprisingly well)
 - A binary compatible emulator for the (Xilinx) Picoblaze
   instruction set.
 - A legup synthesizable hardware design. That is, a C program
@@ -79,8 +79,8 @@ Summary: **DON'T USE IN PRODUCTION**
   code before they added additional odd parity semantics to the TEST instruction.
 
   Needless to say, I implemented the proper additional TEST feature.
-  My attempt of writing this in C resultet in utter cargo cult programming
-  that I'm pretty proud of. What a reason to show off ugly C Code! :)
+  My attempt of writing this in C resulted in utter cargo cult programming
+  which I'm pretty proud of. What a reason to show off ugly C Code! :)
 
   ```C
   /* WARNING! CARGO CULT PROGRAMMING:
